@@ -1,10 +1,16 @@
 import serial
 import time
 
-ser = serial.Serial(port="COM4", baudrate=115000)  # open serial port
+# pegar um pacote com tamanho definido e ir aumentando a frequencia de envio até falhar
+
+b = 0
+ser = serial.Serial(port="COM5", baudrate=115000)  # open serial port
 while True:
-    ser.write(b":00000000000000000000000000000000000000000000000000000000000:\n")
-    time.sleep(0.1)
+    time.sleep(0.05)
+    b += 1
+    a = str(b) +   "\n"
+    print(a)
+    ser.write(str(a).encode('ascii'))
     '''
     ser.write(b":11111111111111111111111111111111111111111111111111111111111:\n")
     time.sleep(0.1)'''
