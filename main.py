@@ -1,6 +1,6 @@
 import serial
 import time
-
+# versao do teteu
 ser = serial.Serial(port="COM4", baudrate=115000)  # open serial port
 while True:
     ser.write(b":00000000000000000000000000000000000000000000000000000000000:\n")
