@@ -5,7 +5,7 @@ b = 0
 
 '''
 80 bytes:
-
+Velocidade AirData rate para cada delay
   19.2 Kbps: delay 0.2
   9.6 Kbps: delay 0.28
   4.8 Kbps: delay 0.42
@@ -18,7 +18,7 @@ b = 0
 delay = 0.4 
 a= 0
 ser = serial.Serial(port="COM3", baudrate=115000)  # open serial port
-while b < 200:
+while b < 250:
     while a < 10:
         message = "Sequencia: " + str(b) + " Pacote: " + str(a) + " Delay: " + str("{:.2f}".format(delay)) + " _1234567891011121314151617181920212223242526\n"
         a += 1
